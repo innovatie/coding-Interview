@@ -15,6 +15,8 @@
     --primarydark: #035e2d;
 	--bodyTextColorWhite: #EBEBEB ;
 	--sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) clamp(1rem, 1.5vw, 2rem);
+    --secondaryTrans: rgba(217, 217, 217, 0.361);
+    --extraColor: #145fa4;
 }
 
 
@@ -166,6 +168,10 @@ a {
     font-size: clamp(32px, 4vw, 42px);
     color: var(--secondary);
     text-transform: uppercase;
+
+    &.white-text {
+        color: var(--bodyTextColorWhite);
+    }
 }
 
 .video-text{
@@ -212,6 +218,44 @@ a {
     }
 }
 
+/* Increased font size for maximum value */
+.cs-text-large {
+    color: var(--bodyTextColor);
+    font-weight: 400;
+    font-size: clamp(16px, 1.8vw, 20px);
+    margin-bottom: 16px;
+    line-height: 30px;
+
+    &.last-line {
+        margin-bottom: 0rem;
+    }
+
+    &.button-bellow {
+        margin-bottom: 2rem;
+    }
+    &.white-text {
+        color: var(--bodyTextColorWhite);
+    }
+}
+/* Increased font size for min value */
+.cs-text-small {
+    color: var(--bodyTextColor);
+    font-weight: 400;
+    font-size: clamp(13px, 1.8vw, 14px);
+    margin-bottom: 16px;
+    line-height: 18px;
+
+    &.last-line {
+        margin-bottom: 0rem;
+    }
+
+    &.button-bellow {
+        margin-bottom: 2rem;
+    }
+    &.white-text {
+        color: var(--bodyTextColorWhite);
+    }
+}
 .button-solid {
     color: #ffffff;
     background-color: var(--primary);

@@ -46,3 +46,271 @@
         }
     }
 }
+
+/*-- -------------------------- -->
+<---        overview            -->
+<--- -------------------------- -*/
+
+#overview  {
+
+    .cs-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .cs-li{
+        list-style-type: none;
+        line-height: 30px;
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+
+        &::before{
+            content: ''; 
+            position: absolute; 
+            left: 0; 
+            top: 11px; 
+            width: 11px; 
+            height: 11px;
+            border-radius: 50%;
+            background-color: var(--primary); 
+        }
+    }
+    .text-content {
+        max-width: 700px;
+    }
+
+    .image-group {
+        /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+        font-size: min(2vw, .8em);
+        width: calc(779 / 16 * 1em);
+        height: calc(542 / 16 * 1em);
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        .cs-picture {
+            position: absolute;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+            }
+        }
+        .cs-picture1 {
+            width: calc(779 / 16 * 1em);
+            height: calc(542 / 16 * 1em);
+            top: 0;
+            left: 0;
+        }
+    
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    #overview  {
+
+        .cs-container {
+            flex-direction: row;
+        }
+
+        .image-group {
+            /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+            font-size: min(0.8vw, .8em);
+        }
+
+        .text-content {
+            max-width: 500px;
+        }
+    }
+}
+/*-- -------------------------- -->
+<---        book-our-service    -->
+<--- -------------------------- -*/
+#book-services{
+
+    .card-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: var(--secondary);
+        border-radius: 27px;
+        padding: 27px;
+    }
+    .text-content {
+        max-width: 100%;
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    .image-group {
+        /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+        font-size: min(2vw, .8em);
+        width: 100%;
+        height: calc(542 / 16 * 1em);
+        display: block;
+        position: relative;
+        z-index: 1;
+        margin-top: 25px;
+        .cs-picture {
+            position: absolute;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                border-radius: 27px;
+            }
+        }
+        .cs-picture1{
+            width: 100%;
+            height: 100%;
+            
+        }
+    
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    #book-services {
+
+        .cs-container {
+            flex-direction: row;
+
+            .card-content{
+                max-height: 364px;
+                overflow: hidden;
+                flex-direction: row;
+
+                padding: 0;
+            }
+        }
+        
+        .image-group {
+            /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+            font-size: min(0.8vw, .8em);
+            width: calc(686 / 16 * 1em);
+            height: calc(542 / 16 * 1em);
+            margin-top: 0;
+            .cs-picture{
+                &.cs-picture1 {
+                    width: calc(779 / 16 * 1em);
+                    height: calc(542 / 16 * 1em);
+                    top: 0;
+                    left: 0;
+                }
+                img{
+                    border-top-left-radius: 250px;
+                    border-bottom-left-radius: 250px;
+                }
+            }
+            
+        }
+
+        .text-content {
+            max-width: 690px;
+            padding-left: 39px;
+            text-align: left;
+        }
+    }
+}
+/*-- -------------------------- -->
+<---     pricing--packages      -->
+<--- -------------------------- -*/
+
+#section-pricing  {
+
+    .cs-container {
+        
+        
+        .cs-title{
+            text-align: center;
+        }
+
+        .cs-row{
+            display: flex;
+            max-width: 1035px;
+            margin: 0 auto;
+            background: var(--secondaryTrans);
+            border-radius: 19px;
+            padding: 20px 18px;
+            flex-wrap: wrap;
+            .cs-col{
+                width: 100%;
+                padding: 20px 18px;
+                .text-content{
+                    background-color: #fff;
+                    padding: 10px 31px;
+                    min-height: 240px;
+                    border-radius: 26px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .package-text{
+                        color: var(--extraColor);
+                    }
+                    .pricing-text{
+                        span{
+                            font-size: clamp(30px, 4vw, 40px);
+                        }
+                    }
+                }
+                &:hover{
+                    .text-content{
+                        background-color: var(--secondary);
+                        
+                        p{
+                            color: #fff;
+                            span{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .text-content {
+        max-width: 700px;
+    }
+
+}
+@media only screen and (min-width: 767px) {
+
+    #section-pricing  {
+        .cs-container {
+            .cs-row{
+                .cs-col{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1024px) {
+
+    #section-pricing  {
+        .cs-container {
+            .cs-row{
+                .cs-col{
+                    width: 33.333%;
+                }
+            }
+        }
+    }
+}
