@@ -85,8 +85,8 @@
     .image-group {
         /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
         font-size: min(2vw, .8em);
-        width: calc(779 / 16 * 1em);
-        height: calc(542 / 16 * 1em);
+        width: calc(561 / 16 * 1em);
+        height: calc(540 / 16 * 1em);
         display: block;
         position: relative;
         z-index: 1;
@@ -104,8 +104,8 @@
             }
         }
         .cs-picture1 {
-            width: calc(779 / 16 * 1em);
-            height: calc(542 / 16 * 1em);
+            width: calc(561 / 16 * 1em);
+            height: calc(540 / 16 * 1em);
             top: 0;
             left: 0;
         }
